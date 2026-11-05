@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sustainability Mission UPSRJ · Good practices</title>
+<meta name="description" content="Sustainability Mission UPSRJ: find a good practice on campus, research the problem it solves, interview the Sustainability Department and download your work as a PDF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=1">
+<script>
+try { if (localStorage.getItem('sustainMission.lv') === '1') document.documentElement.classList.add('lv');
+      if (localStorage.getItem('sustainMission.lvClaro') === '1') document.documentElement.classList.add('lv-claro');
+      var fs = localStorage.getItem('sustainMission.fs'); if (fs) document.documentElement.style.setProperty('--lv-fs', fs + 'px'); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="saltar" href="#contenido" data-t="skip">Skip to content</a>
+<div class="app">
+  <div class="acceso" role="group" data-t-aria="access" aria-label="Reading options">
+    <button type="button" class="acc-btn" id="btnEn" lang="en" aria-pressed="true">English</button>
+    <button type="button" class="acc-btn" id="btnEs" lang="es" aria-pressed="false">Español sencillo</button>
+    <button type="button" class="acc-btn" id="btnLv" aria-pressed="false"><span aria-hidden="true">👁</span> <span data-t="btnLv">Low vision</span></button>
+  </div>
+  <div class="lv-bar" role="group" data-t-aria="lvBar" aria-label="Reading options">
+    <button type="button" id="lvMas" data-t="bigger">Text A+</button>
+    <button type="button" id="lvMenos" data-t="smaller">Text A−</button>
+    <button type="button" id="lvTema" data-t="toWhite">White background</button>
+  </div>
+
+  <div class="logos">
+    <img src="assets/logo_upsrj.png" alt="Universidad Politécnica de Santa Rosa Jáuregui">
+    <img src="assets/logo_iehl.png" alt="IEHL · Integral Education for Higher Learning">
+  </div>
+
+  <header class="hero">
+    <svg class="sierra" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <rect x="0" y="-400" width="1200" height="660" fill="#E1E8E6"/>
+      <path d="M0 150 L140 96 L260 132 L380 80 L520 128 L660 70 L820 122 L960 84 L1100 120 L1200 98 L1200 260 L0 260Z" fill="#C1CDC4"/>
+      <path d="M0 178 C150 140 260 160 380 146 S640 120 780 150 S1040 132 1200 156 L1200 260 L0 260Z" fill="#9DB19E"/>
+      <path d="M0 206 C180 176 330 196 470 182 S760 168 900 190 S1110 184 1200 196 L1200 260 L0 260Z" fill="#708872"/>
+      <g fill="#3A4E46">
+        <path d="M0 226 C220 206 420 224 640 214 S1000 206 1200 220 L1200 260 L0 260Z"/>
+        <path d="M70 226 l12 -34 l12 34z M96 228 l9 -24 l9 24z M1030 220 l13 -38 l13 38z M1060 222 l9 -26 l9 26z M1110 222 l11 -30 l11 30z M760 216 l10 -28 l10 28z"/>
+      </g>
+      <path d="M0 246 C300 236 600 244 900 238 S1150 240 1200 242 L1200 260 L0 260Z" fill="#2A3A34"/>
+    </svg>
+    <div class="titulo">
+      <div class="eyebrow" data-t="eyebrow">UPSRJ · Sustainability Department</div>
+      <h1>Sustainability Mission UPSRJ</h1>
+      <div class="tag" data-t="tagline">Good practices</div>
+    </div>
+  </header>
+  <div class="lv-titulo" hidden><h1>Sustainability Mission UPSRJ</h1><p data-t="tagline">Good practices</p></div>
+
+  <div class="top">
+    <nav class="steps" data-t-aria="phasesNav" aria-label="Phases">
+      <button class="step" id="st1" disabled data-t="st1">1 · Find &amp; photo</button>
+      <button class="step" id="st2" disabled data-t="st2">2 · Research</button>
+      <button class="step" id="st3" disabled data-t="st3">3 · Interview</button>
+      <button class="step" id="st4" disabled data-t="st4">PDF</button>
+    </nav>
+    <button class="btn ghost small" id="btnSalir" hidden data-t="exit">Exit</button>
+  </div>
+  <div class="confirma" id="confSalir" hidden><span data-t="exitConfirm"></span><button class="btn small" id="salirSi" data-t="exitYes">Yes, exit</button><button class="btn ghost small" id="salirNo" data-t="cancel">Cancel</button></div>
+
+  <div class="banner" id="demo" hidden data-t="demo"></div>
+  <div class="banner" id="aviso" role="status" aria-live="polite" hidden></div>
+  <p class="banner" id="lsmNote" hidden></p>
+
+  <main id="contenido">
+  <!-- INICIO -->
+  <section id="vInicio" class="inicio">
+    <form class="card" id="fInicio" novalidate>
+      <div><div class="eyebrow" data-t="beforeStart"></div><h2 data-t="enterTeam"></h2></div>
+      <p data-t="introLogin"></p>
+      <div class="field">
+        <label for="inCodigo" data-t="groupCode"></label>
+        <input type="text" id="inCodigo" class="code-in" placeholder="IRC01-K7P3" autocomplete="off" autocapitalize="characters" spellcheck="false">
+        <span class="help" data-t="askTeacher"></span>
+      </div>
+      <div class="grupo-ok" id="grupoOk" hidden></div>
+      <div id="pasoEquipo" hidden style="display:flex;flex-direction:column;gap:14px">
+        <div class="field"><label for="inEquipo" data-t="team"></label><select id="inEquipo"></select><span class="help" id="ayudaEquipo"></span></div>
+        <div class="field"><label for="inPin" data-t="pinLabel"></label><input type="password" id="inPin" class="pin-in" inputmode="numeric" maxlength="4" autocomplete="off"><span class="help" id="ayudaPin"></span></div>
+        <div class="field" id="campoIntegrantes"><label for="inIntegrantes" data-t="members"></label><textarea id="inIntegrantes" data-t-ph="membersPh"></textarea></div>
+      </div>
+      <p class="msg bad" id="errInicio" role="alert" hidden></p>
+      <button class="btn" type="submit" id="btnEntrarEquipo" data-t="cont"></button>
+    </form>
+    <div class="card">
+      <div><div class="eyebrow" data-t="assignments"></div><h2 data-t="teamsPlaces"></h2></div>
+      <div class="practicas" id="listaPracticas"></div>
+    </div>
+  </section>
+
+  <!-- FASE 1 -->
+  <section id="vF1" class="mision" hidden>
+    <div class="mapWrap">
+      <div id="mapaBox"></div>
+      <div class="mapHud"><span class="chip" id="chipIntentos"></span><a class="chip" target="_blank" rel="noopener" href="https://earth.google.com/web/@20.842761,-100.434183,2100a,700d,35y,0h,45t,0r">Google Earth ↗</a></div>
+    </div>
+    <div class="panel">
+      <div class="card">
+        <div class="mission-head"><div class="badge" id="mBadge">1</div><div><div class="eyebrow" id="mGrupo"></div><h2 id="mTitulo"></h2></div></div>
+        <p class="problema"><b data-t="problemFocus"></b><span id="mProblema"></span></p>
+      </div>
+      <div class="task" id="t1">
+        <div class="num">1</div>
+        <div class="task-body">
+          <h3 data-t="t1h"></h3><p data-t="t1p"></p>
+          <p class="msg" id="t1msg" role="status" aria-live="polite" hidden></p>
+          <details class="lista"><summary data-t="listOpen"></summary><div class="lista-botones" data-lista></div></details>
+          <div class="lista-lv" hidden style="flex-direction:column;gap:8px"><p data-t="t1list"></p><div class="lista-botones" data-lista></div></div>
+        </div>
+      </div>
+      <div class="task" id="t2">
+        <div class="num">2</div>
+        <div class="task-body">
+          <h3 data-t="t2h"></h3><p data-t="t2p"></p>
+          <label class="drop" for="inFoto"><input type="file" id="inFoto" accept="image/*"><b data-t="upload"></b><span class="eyebrow" data-t="fromCam"></span></label>
+          <img class="foto" id="fotoPrev" alt="" hidden>
+          <p class="msg" id="t2msg" role="status" aria-live="polite" hidden></p>
+          <button class="btn" id="btnF2" disabled data-t="goF2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASE 2 -->
+  <section id="vF2" class="fase" hidden>
+    <aside class="lateral">
+      <div class="card">
+        <div class="mission-head"><div class="badge" data-badge>1</div><div><div class="eyebrow" data-t="f2eyebrow"></div><b data-nombre></b></div></div>
+        <div class="progress"><i id="prog2"></i></div>
+        <span class="save" id="save2" role="status" aria-live="polite"></span>
+        <button class="btn ghost small" id="btnReint2" hidden data-t="tryAgain"></button>
+        <nav class="indice"><a href="#b-art" data-t="artH"></a><a href="#b-ctx" data-t="ctxH"></a><a href="#b-apa" data-t="apaH"></a><a href="#b-intro" data-t="introH"></a></nav>
+      </div>
+    </aside>
+    <div class="card">
+      <h2 data-t="f2h"></h2><p data-t="f2p"></p>
+      <section class="bloque" id="b-art">
+        <h3 data-t="artH"></h3><p data-t="artP"></p>
+        <div class="tip">
+          <p><b data-t="whereSearch"></b><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://scielo.org" target="_blank" rel="noopener">SciELO</a> · <a href="https://www.redalyc.org" target="_blank" rel="noopener">Redalyc</a> · <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a></p>
+          <p><b data-t="searchTerms"></b><span id="buscar"></span></p>
+        </div>
+        <div id="articulos" style="display:flex;flex-direction:column;gap:12px"></div>
+      </section>
+      <section class="bloque" id="b-ctx"><h3 data-t="ctxH"></h3><p data-t="ctxP"></p><div id="contexto" style="display:flex;flex-direction:column;gap:14px"></div></section>
+      <section class="bloque" id="b-apa">
+        <h3 data-t="apaH"></h3><p data-t="apaP"></p>
+        <p class="help" data-t="apaEx"></p>
+        <textarea id="f-apa" data-c="apa" rows="5" aria-labelledby="b-apa"></textarea>
+      </section>
+      <section class="bloque" id="b-intro">
+        <h3 data-t="introH"></h3><p data-t="introP"></p>
+        <textarea id="f-intro" data-c="intro" aria-labelledby="b-intro"></textarea>
+        <span class="cuenta" id="cuenta"></span>
+      </section>
+      <button class="btn" id="btnF3" data-t="goF3"></button>
+    </div>
+  </section>
+
+  <!-- FASE 3 -->
+  <section id="vF3" class="fase" hidden>
+    <aside class="lateral">
+      <div class="card">
+        <div class="mission-head"><div class="badge" data-badge>1</div><div><div class="eyebrow" data-t="f3eyebrow"></div><b data-nombre></b></div></div>
+        <div class="progress"><i id="prog3"></i></div>
+        <span class="save" id="save3" role="status" aria-live="polite"></span>
+      </div>
+    </aside>
+    <div class="card">
+      <h2 data-t="f3h"></h2><p data-t="f3p"></p>
+      <div class="grid3">
+        <div class="field"><label for="f-ent_nombre" data-t="who"></label><input type="text" id="f-ent_nombre" data-c="ent_nombre"></div>
+        <div class="field"><label for="f-ent_cargo" data-t="role"></label><input type="text" id="f-ent_cargo" data-c="ent_cargo"></div>
+        <div class="field"><label for="f-ent_fecha" data-t="date"></label><input type="date" id="f-ent_fecha" data-c="ent_fecha"></div>
+      </div>
+      <section class="bloque"><h3 data-t="guided"></h3><div id="guiadas" style="display:flex;flex-direction:column;gap:12px"></div></section>
+      <section class="bloque"><h3 data-t="own"></h3><div id="propias" style="display:flex;flex-direction:column;gap:12px"></div></section>
+      <button class="btn" id="btnF4" data-t="goPdf"></button>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section id="vF4" hidden>
+    <div class="card" style="max-width:720px">
+      <div class="eyebrow" data-t="f4eyebrow"></div>
+      <h2 data-t="f4h"></h2><p data-t="f4p"></p>
+      <ul class="checklist" id="checklist"></ul>
+      <p class="msg" id="pdfMsg" role="status" aria-live="polite" hidden></p>
+      <div class="row"><button class="btn" id="btnPdf" data-t="download"></button></div>
+    </div>
+  </section>
+
+  <section class="card" id="vMuro" hidden>
+    <div><div class="eyebrow" id="muroGrupo"></div><h2 data-t="wall"></h2></div>
+    <div class="muro" id="muro"></div>
+  </section>
+  </main>
+
+  <footer class="pie">
+    <div class="logos">
+      <img src="assets/logo_upsrj.png" alt="Universidad Politécnica de Santa Rosa Jáuregui">
+      <img src="assets/logo_iehl.png" alt="IEHL · Integral Education for Higher Learning">
+    </div>
+    <img class="firma" src="assets/firma_designed_by_chipo.png" alt="Designed and built by Chipo" data-t-alt="made">
+  </footer>
+</div>
+<div id="flash"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="config.js?v=1"></script>
+<script src="api.js?v=1"></script>
+<script src="i18n.js?v=1"></script>
+<script src="data.js?v=1"></script>
+<script src="map.js?v=1"></script>
+<script src="pdf.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
