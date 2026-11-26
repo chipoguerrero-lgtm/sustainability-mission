@@ -1,5 +1,7 @@
 # Sustainability Mission UPSRJ · Good practices
 
+> Forma parte del proyecto **Misiones UPSRJ**. Registro central (repositorios, servidores, conversaciones, decisiones y pendientes): https://github.com/chipoguerrero-lgtm/misiones/blob/main/PROYECTO.md
+
 Actividad por equipos sobre las **buenas prácticas de sustentabilidad** del campus de la UPSRJ.
 
 - **Página de alumnos:** `index.html`, en inglés, con botón de **español sencillo** y modo de **baja visión**. No necesitan cuenta.
